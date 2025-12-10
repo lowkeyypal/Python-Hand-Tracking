@@ -510,7 +510,7 @@ FRONTEND_TEMPLATE = '''
         recordGestureBtn.addEventListener('click', recordGesture);
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'q' || e.key === 'Q') {
+            if (e.key === 'Escape' || e.key === 'Escape') {
                 stopCamera();
             }
             if (e.key === 'r' || e.key === 'R') {

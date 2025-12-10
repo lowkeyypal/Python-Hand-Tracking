@@ -35,8 +35,8 @@ def run_hand_tracking():
                     
         # Dsplay window and flip frame
             cv2.imshow('Hand Tracking', cv2.flip(frame, 1))
-            # Exit on Q key
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            # Exit on ESC key
+            if cv2.waitKey(1) & 0xFF == ord('Esc'):
                 break  
     
     cam.release()
