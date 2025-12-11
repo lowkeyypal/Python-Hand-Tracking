@@ -18,7 +18,7 @@ def hand_mouse_control():
     pinch_threshold = 0.05
     
     #New Lines for smoothening
-    smoothening = 7
+    smoothening = 12
     prev_x, prev_y = 0, 0
     
     #Keep window on top
