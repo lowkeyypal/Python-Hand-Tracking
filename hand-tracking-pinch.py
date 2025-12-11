@@ -21,6 +21,10 @@ def hand_mouse_control():
     smoothening = 7
     prev_x, prev_y = 0, 0
     
+    #Keep window on top
+    cv2.namedWindow("Hand Gesture Mouse", cv2.WINDOW_NORMAL)
+    cv2.setWindowProperty("Hand Gesture Mouse", cv2.WND_PROP_TOPMOST, 1)
+    
     #Process video frames
     while cam.isOpened():
         sucess, frame = cam.read()
