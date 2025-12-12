@@ -4,7 +4,7 @@ A real-time hand tracking Tic-Tac-Toe game where you play against an AI using ha
 
 ## Features
 
-- 🖐️ **Hand Gesture Control**: Move cursor with index finger, click by pinching
+- ☝️ **Finger Gesture Control**: Move cursor with index finger, click by pinching
 - 🤖 **AI Opponent**: Play against AI with 3 difficulty levels (Easy, Medium, Hard)
 - ⭕❌ **Symbol Choice**: Choose to play as X or O
 - 📊 **Score Tracking**: Keep track of wins, losses, and draws
@@ -98,11 +98,6 @@ Works best in:
 - Ensure good lighting
 - Keep hand within camera frame
 - Try different hand positions
-
-**Slow performance?**
-- Close other browser tabs
-- Reduce browser zoom level
-- Try a lower AI difficulty
 
 ## License
 
