@@ -800,7 +800,7 @@ FRONTEND_TEMPLATE = '''
                 ctx.stroke();
 
                 // Cursor position
-                let rawX = mapRange(indexMCP.x, 0.2, 0.8, 0, 1);
+                let rawX = mapRange(1 - indexMCP.x, 0.2, 0.8, 0, 1);
                 let rawY = mapRange(indexMCP.y, 0.2, 0.8, 0, 1);
                 const currX = lerp(prevX, rawX, 0.2);
                 const currY = lerp(prevY, rawY, 0.2);
