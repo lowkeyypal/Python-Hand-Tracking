@@ -386,12 +386,15 @@ FRONTEND_TEMPLATE = '''
                     </div>
                 </div>
                 <div class="instructions">
-                    <h3>✋ How to Play</h3>
+                    <h3>ℹ️ How to Play</h3>
                     <ul>
-                        <li>🖐️ <strong>Move:</strong> Point index finger</li>
-                        <li>👌 <strong>Click:</strong> Pinch thumb + index</li>
+                        <li>☝️ <strong>Move:</strong> Use index finger to point mouse</li>
+                        <li>👌 <strong>Click:</strong> Pinch thumb and index finger to perform mouse click</li>
                         <li>🤖 <strong>AI:</strong> Computer plays opposite</li>
-                        <li>🎯 <strong>Win:</strong> Get 3 in a row</li>
+                        <li>😊 <strong>Difficulty:</strong> Easy, Medium, or Hard</li>
+                        <li>❌/⭕ <strong>Symbol:</strong> Choose X or O to play</li>
+                        <li>🔄 <strong>New Game:</strong> Restart anytime</li>
+                        <li>↩️ <strong>Undo:</strong> Take back your last move</li>
                     </ul>
                 </div>
             </div>
@@ -432,7 +435,7 @@ FRONTEND_TEMPLATE = '''
         <!-- Right Column -->
         <div class="right-column">
             <div class="card title-card">
-                <span class="title-emoji">🎮</span>
+                <span class="title-emoji">⭕❌</span>
                 <div class="title-text">
                     Tic<br>Tac<br>Toe
                 </div>
@@ -868,6 +871,6 @@ def index():
     return render_template_string(FRONTEND_TEMPLATE)
 
 if __name__ == '__main__':
-    print("🚀 Hand Gesture Tic-Tac-Toe Started!")
-    print("👉 Open http://localhost:5000 in your browser")
+    print("⭕❌ Pointing Tic-Tac-Toe Started!")
+    print("🌐 Visit http://localhost:5000")
     socketio.run(app, host='0.0.0.0', port=5000, debug=True)
