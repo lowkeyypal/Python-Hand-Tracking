@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="card video-card">
+                <div class="video-container">
+                    <video id="video"></video>
+                    <canvas id="canvas" width="640" height="480"></canvas>
+                    <div class="hud">
+                        <div class="hud-row">
+                            <span class="hud-label">State:</span>
+                            <span class="hud-value state-hover" id="state">Hover</span>
+                        </div>
+                        <div class="hud-row">
+                            <span class="hud-label">FPS:</span>
+                            <span class="hud-value" id="fps">0</span>
+                        </div>
+                        <div class="hud-row">
+                            <span class="hud-label">Hands:</span>
+                            <span class="hud-value" id="hands">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="instructions">
+                    <h3>ℹ️ How to Play</h3>
+                    <ul>
+                        <li>☝️ <strong>Move:</strong> Use index finger to point mouse</li>
+                        <li>👌 <strong>Click:</strong> Pinch thumb and index finger to perform mouse click</li>
+                        <li>🤖 <strong>AI:</strong> Computer plays opposite</li>
+                        <li>😊 <strong>Difficulty:</strong> Easy, Medium, or Hard</li>
+                        <li>❌/⭕ <strong>Symbol:</strong> Choose X or O to play</li>
+                        <li>🔄 <strong>New Game:</strong> Restart anytime</li>
+                        <li>↩️ <strong>Undo:</strong> Take back your last move</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Column -->
+        <div class="game-card card">
+            <div class="status-card">
+                <div class="status-text" id="status">Your Turn (X)</div>
+                <div class="scores">
+                    <div class="score-item">
+                        <div class="score-label" id="playerLabel">You (X)</div>
+                        <div class="score-value" style="color: #00ff00;" id="playerScore">0</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">Draws</div>
+                        <div class="score-value" style="color: #ffd700;" id="drawScore">0</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label" id="aiLabel">AI (O)</div>
+                        <div class="score-value" style="color: #ff6b6b;" id="aiScore">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="card title-card">
+                <span class="title-emoji">⭕❌</span>
+                <div class="title-text">
+                    Tic<br>Tac<br>Toe
+                </div>
+            </div>
+
+            <div class="card control-card">
+                <h3>Choose Difficulty</h3>
+                <div class="difficulty-grid">
+                    <button class="btn active" data-difficulty="easy">😊 Easy</button>
+                    <button class="btn" data-difficulty="medium">🤔 Medium</button>
+                    <button class="btn" data-difficulty="hard">😈 Hard</button>
+                </div>
+            </div>
+
+            <div class="card control-card">
+                <h3>Choose Symbol</h3>
+                <div class="symbol-grid">
+                    <button class="btn btn-x active" data-symbol="X">Play as X</button>
+                    <button class="btn btn-o" data-symbol="O">Play as O</button>
+                </div>
+            </div>
+
+            <div class="card control-card">
+                <div class="action-grid">
+                    <button class="btn btn-primary" id="newGame">🔄 New Game</button>
+                    <button class="btn btn-secondary" id="undo">↩️ Undo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/handTracking.js') }}"></script>
+</body>
+</html>
