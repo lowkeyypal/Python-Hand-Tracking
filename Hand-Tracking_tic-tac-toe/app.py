@@ -324,25 +324,6 @@ FRONTEND_TEMPLATE = '''
     <div class="main-container">
         <div class="game-panel">
             <h1>🎮 Tic-Tac-Toe vs AI</h1>
-            
-            <div class="game-status">
-                <div class="status-text" id="statusText">Your Turn (X)</div>
-                
-                <div class="score-board">
-                    <div class="score-item">
-                        <div class="score-label">You (X)</div>
-                        <div class="score-value" style="color: #00ff00;" id="playerScore">0</div>
-                    </div>
-                    <div class="score-item">
-                        <div class="score-label">Draws</div>
-                        <div class="score-value" style="color: #ffd700;" id="drawScore">0</div>
-                    </div>
-                    <div class="score-item">
-                        <div class="score-label">AI (O)</div>
-                        <div class="score-value" style="color: #ff6b6b;" id="aiScore">0</div>
-                    </div>
-                </div>
-            </div>
 
             <div class="game-board" id="gameBoard">
                 <div class="cell" data-index="0"></div>
@@ -402,11 +383,11 @@ FRONTEND_TEMPLATE = '''
             </div>
         </div>
 
-        <div class="left-panel">
-            <div class="video-container">
-                <video id="input_video"></video>
-                <canvas id="output_canvas" width="640" height="480"></canvas>
-                <div class="cursor-indicator" id="cursorIndicator"></div>
+        # <div class="left-panel">
+        #     <div class="video-container">
+        #         <video id="input_video"></video>
+        #         <canvas id="output_canvas" width="640" height="480"></canvas>
+        #         <div class="cursor-indicator" id="cursorIndicator"></div>
             
             <div class="game-status">
                 <div class="status-text" id="statusText">Your Turn (X)</div>
