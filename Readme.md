@@ -24,8 +24,6 @@ tic-tac-toe-hand-tracking/
 │       ├── game.js            # Game logic & AI
 │       ├── handTracking.js    # Hand detection
 │       └── ui.js              # UI updates
-└── templates/
-    └── index.html             # HTML template
 ```
 
 ## Installation
