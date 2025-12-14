@@ -1,8 +1,8 @@
-python-socketio==5.9.0
-flask
-flask-socketio
-eventlet
 opencv-python
 mediapipe
 pyautogui
 numpy
+Flask==3.0.0
+flask-socketio==5.3.6
+python-socketio==5.11.0
+eventlet==0.35.2
