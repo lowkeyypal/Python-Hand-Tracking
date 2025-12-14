@@ -50,6 +50,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 15px;
+    position: relative;
 }
 
 video {
@@ -63,14 +64,26 @@ canvas {
     transform: scaleX(-1);
 }
 
-.hud {
+/* .hud {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 12px;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8px 12px;
     border-radius: 8px;
     font-size: 11px;
+    z-index: 10;
+} */
+
+.hud {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 10px 12px;
+    border-radius: 0 15px 0 15px;
+    font-size: 11px;
+    z-index: 10;
 }
 
 .hud-row {

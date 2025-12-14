@@ -9,8 +9,7 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    print("🚀 Hand Gesture Tic-Tac-Toe Started!")
-    print("👉 Open http://localhost:5000 in your browser")
-    print("✋ Use your hand to play against AI!")
+    print("⭕❌ Pointing Tic-Tac-Toe Started!")
+    print("🌐 Visit http://localhost:5000")
     print("💡 Press Ctrl+C to stop")
     socketio.run(app, host='0.0.0.0', port=5000, debug=True)
