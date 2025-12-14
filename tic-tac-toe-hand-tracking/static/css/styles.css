@@ -182,6 +182,7 @@ canvas {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s;
+    aspect-ratio: 1;
 }
 
 .cell:hover:not(.taken) {
