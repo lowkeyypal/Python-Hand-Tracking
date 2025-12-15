@@ -40,6 +40,7 @@ function makeMove(index) {
     }
 
     currentPlayer = aiSymbol;
+    gameActive = false; // Lock during AI's turn
     updateStatus(`AI's Turn (${aiSymbol})`);
 
     setTimeout(() => {
@@ -66,8 +67,12 @@ function aiMove() {
             endGame(result);
         } else {
             currentPlayer = playerSymbol;
+            gameActive = true; // Unlock for player's turn
             updateStatus(`Your Turn (${playerSymbol})`);
         }
+    }
+    else {
+        gameActive = true; // Unlock if no move is possible
     }
 }
 
@@ -161,6 +166,7 @@ function resetGame() {
 
     if (playerSymbol === 'O') {
         updateStatus(`AI's Turn (${aiSymbol})`);
+        gameActive = false;  // Lock during AI's turn
         setTimeout(() => aiMove(), 500);
     } else {
         updateStatus(`Your Turn (${playerSymbol})`);
